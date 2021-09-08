@@ -33,19 +33,22 @@ let arrayStudentObject = [
     }
 ];
 
-var newName;
-var newSurname;
-var newAge;
+var newStudent = {
+    'nome': "",
+    'cognome': "",
+    'età': 0
+};
 do {
-    newName = prompt(`Inserisci il nome del nuovo studente: `);
-} while (newName.length < 4);
+    newStudent.nome = prompt(`Inserisci il nome del nuovo studente: `);
+} while (newStudent.nome.length < 4);
 do {
-    newSurname = prompt(`Inserisci il cognome del nuovo studente: `);
-} while (newSurname.length < 4);
+    newStudent.cognome = prompt(`Inserisci il cognome del nuovo studente: `);
+} while (newStudent.cognome.length < 4);
 do {
-    newAge = parseInt(prompt(`Inserisci il cognome del nuovo studente: `));
-} while (isNaN(newAge));
+    newStudent.età += parseInt(prompt(`Inserisci l'età del nuovo studente: `));
+} while (isNaN(newStudent.età));
 
+arrayStudentObject.push(newStudent);
 
 
 for (let i = 0; i < arrayStudentObject.length; i++) {
